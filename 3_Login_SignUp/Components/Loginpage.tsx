@@ -5,9 +5,8 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  ImageBackground,
 } from 'react-native';
-
+import { WEB_CLIENT_ID } from '@env';
 import {
   GoogleSignin,
   GoogleSigninButton,
@@ -36,7 +35,7 @@ const LoginPage: React.FC<Props> = ({ navigation }) => {
 
   useEffect(() => {
     GoogleSignin.configure({
-      webClientId: '240036700964-er9hpu8ivd2febpb5itt3dr2dg1698p7.apps.googleusercontent.com',
+      webClientId: WEB_CLIENT_ID,
   });
 
   const checkIfSignedIn = async () => {
