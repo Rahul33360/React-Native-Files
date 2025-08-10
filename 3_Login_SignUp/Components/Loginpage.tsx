@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { GOOGLE_WEB_CLIENT_ID } from '@env';
 import {
   View,
   Text,
@@ -36,7 +37,7 @@ const LoginPage: React.FC<Props> = ({ navigation }) => {
 
   useEffect(() => {
     GoogleSignin.configure({
-      webClientId: '240036700964-er9hpu8ivd2febpb5itt3dr2dg1698p7.apps.googleusercontent.com',
+      webClientId: GOOGLE_WEB_CLIENT_ID,
   });
 
   const checkIfSignedIn = async () => {
